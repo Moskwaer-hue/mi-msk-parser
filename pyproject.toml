@@ -1,0 +1,28 @@
+
+[project]
+name = "mi-msk-parser"
+version = "0.1.0"
+description = "Автоматизация карточек товаров для mi.msk.ru"
+requires-python = ">=3.11"
+dependencies = [
+	"python-dotenv>=1.0.1",
+	"openpyxl>=3.1.5",
+	"pandas>=2.2.3",
+	"requests>=2.32.3",
+]
+
+[project.optional-dependencies]
+dev = [
+	"pytest>=8.3.3",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
